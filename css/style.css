@@ -1,0 +1,230 @@
+@font-face {
+	font-family: 'Titulo';
+	src: url('../assets/font/ANODETONOONE.TTF');
+}
+
+@keyframes play{
+	from {background-position: 0px;}
+	to {background-position: -512px;}
+}
+
+@keyframes play2{
+	from {background-position: 0px;}
+	to {background-position: -528px;}
+}
+
+@keyframes play3 {
+	from {background-position: 0px;}
+	to {background-position: -308px;}
+}
+
+/*------------------------------*/
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	overflow: hidden;
+	position: relative;
+	box-sizing: border-box;
+	height: 100vh;
+	width: 100vw;
+	background-image: url('../assets/images/fundo.jpg');
+	background-repeat: no-repeat;
+	background-size:cover;
+}
+
+#container{
+	width: 960px;
+	position: relative;
+	margin: 0 auto;
+}
+
+#fundoGame{
+	width: 960px;
+	height: 630px;
+	background-image: url('../assets/images/fundo_game.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 5px solid #fff;
+}
+
+#inicio{
+	width: 350px;
+	height: 200px;
+	background-color: #FFFFFFCC;
+	border-radius: 5px;
+	margin: 200px auto 0;
+	padding: 25px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+#inicio p{
+	margin-top: 5px;
+	font-size: 1.25rem;
+}
+
+.clique-aqui{
+	border: 3px solid black;
+	border-radius: 325px;
+	padding: 15px 25px;
+	font-size: 1.5rem;
+	cursor: pointer;
+	transition: background-color .5s, color .5s;
+}
+
+.clique-aqui:hover{
+	background-color: black;
+	color: white;
+}
+
+h1 {
+	font-family: 'Titulo';
+	font-size: 3rem;
+	color: #603A03;
+}
+
+#jogador{
+	width: 256px;
+	height: 67px;
+	position: absolute;
+	left: 10px;
+	top: calc(50% - 67px);
+	background-image: url('../assets/images/apache.png');
+}
+
+#inimigo1{
+	width: 256px;
+	height: 67px;
+	position: absolute;
+	left: 700px;
+	top: 100px;
+	background-image: url('../assets/images/inimigo1.png');
+}
+
+#inimigo2{
+	width: 165px;
+	height: 70px;
+	position: absolute;
+	left: 800px;
+	top: 450px;
+	background-image: url('../assets/images/inimigo2.png');
+}
+
+#amigo{
+	width: 44px;
+	height: 51px;
+	position: absolute;
+	left: 0px;
+	top: 450px;
+	background-image: url('../assets/images/amigo.png');
+}
+
+.anima1{
+	background-image: url('../assets/images/apache.png');
+	animation: play .1s steps(2) infinite;
+}
+
+.anima2{
+	background-image: url('../assets/images/inimigo1.png');
+	animation: play .1s steps(2) infinite;
+}
+
+.anima3{
+	background-image: url('../assets/images/amigo.png');
+	animation: play2 .8s steps(12) infinite;
+}
+
+.anima4{
+	background-image: url('../assets/images/amigo_morte.png');
+	animation: play3 .8s steps(7) infinite;
+}
+
+#disparo{
+	width: 50px;
+	height: 8px;
+	position: absolute;
+	background-image: url('../assets/images/disparo.png');
+}
+
+#explosao1 {
+	width: 15px;
+	height: 87px;
+	position: absolute;
+}
+
+#explosao2 {
+	width: 15px;
+	height: 87px;
+	position: absolute;	
+}
+
+#explosao3 {
+	width: 44px;
+	height: 51px;
+	position: absolute;
+}
+
+#placar{
+	width: 450px;
+	height: 50px;
+	position: absolute;
+	bottom: 5px;
+	left: 25px;
+}
+
+h2{
+	font-family: 'Titulo';
+	font-size: 20px;
+	color: #FFF;
+}
+
+#energia{
+	width: 140px;
+	height: 38px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+h3{
+	font-family: 'Titulo';
+	border: 3px solid #603A03;
+	color: #603A03;
+	border-radius: 325px;
+	padding: 15px 25px;
+	font-size: 1.5rem;
+	cursor: pointer;
+	transition: background-color .5s, color .5s;
+}
+
+h3:hover{
+	background-color: #603A03;
+	color: white;
+}
+
+#fim{
+	width: 350px;
+	height: 200px;
+	background-color: #FFFFFFCC;
+	border-radius: 5px;
+	margin: 200px auto 0;
+	padding: 25px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	text-align: center;
+}
+
+#fim p{
+	font-size: 1.25rem;
+}
+
+
